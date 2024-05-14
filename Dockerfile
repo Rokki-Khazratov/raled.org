@@ -7,7 +7,7 @@ WORKDIR /code
 
 COPY pyproject.toml poetry.lock /code/
 
-RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+RUN pip install --no-cache-dir poetry
 
 ENV PATH="/root/.poetry/bin:${PATH}"
 RUN poetry config virtualenvs.create false

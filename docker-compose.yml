@@ -11,10 +11,10 @@ services:
 
   web:
     build: .
-    command: poetry run python manage.py runserver 127.0.0.1:8000
+    command: poetry run python manage.py runserver 127.0.0.1:8080
     volumes:
       - .:/code
     ports:
-      - "8000:8000"
+      - "127.0.0.1:8080:8080" 
     depends_on:
       - db
