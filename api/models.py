@@ -24,3 +24,30 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Contact(models.Model):
+    univercity_name = models.CharField(max_length=255)
+    phone_number = models.CharField(max_length=255)
+    location = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.univercity_name
+
+
+class About(models.Model):
+    our_history = models.CharField(max_length=1000)
+    our_mission = models.CharField(max_length=1000)
+    fup_regulation = models.CharField(max_length=1000)
+
+    def __str__(self):
+        return self.our_history
+
+
+class Worker(models.Model):
+    full_name = models.CharField(max_length=50)
+    work = models.CharField(max_length=55)
+    image = models.ImageField(upload_to='workers/image')
+
+    def __str__(self):
+        return self.full_name

@@ -6,6 +6,12 @@ from .views import (
     CategoryRetrieveUpdateDestroyAPIView,
     ProductListCreateAPIView,
     ProductRetrieveUpdateDestroyAPIView,
+    ContactListCreateAPIView, 
+    ContactRetrieveUpdateDestroyAPIView, 
+    AboutListCreateAPIView, 
+    AboutRetrieveUpdateDestroyAPIView, 
+    WorkerListCreateAPIView, 
+    WorkerRetrieveUpdateDestroyAPIView, 
 )
 
 
@@ -14,4 +20,10 @@ urlpatterns = [
     path('categories/<int:pk>/', CategoryRetrieveUpdateDestroyAPIView.as_view(), name='category-retrieve-update-destroy'),
     path('products/', ProductListCreateAPIView.as_view(), name='product-list-create'),
     path('products/<int:pk>/', ProductRetrieveUpdateDestroyAPIView.as_view(), name='product-retrieve-update-destroy'),
+    path('contacts/', ContactListCreateAPIView.as_view(), name='contact-list-create'),
+    path('contacts/<int:pk>/', ContactRetrieveUpdateDestroyAPIView.as_view(), name='contact-detail'),
+    path('aboutus/', AboutListCreateAPIView.as_view(), name='aboutus-list-create'),
+    path('aboutus/<int:pk>/', AboutRetrieveUpdateDestroyAPIView.as_view(), name='aboutus-detail'),
+    path('workers/', WorkerListCreateAPIView.as_view(), name='worker-list-create'),
+    path('workers/<int:pk>/', WorkerRetrieveUpdateDestroyAPIView.as_view(), name='worker-detail'),
 ]
