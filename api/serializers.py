@@ -6,7 +6,7 @@ class CategorySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Category
-        fields = ['name']
+        fields = ['id', 'name']
 
 
 class ProductSerializer(serializers.ModelSerializer):
@@ -18,30 +18,30 @@ class ProductSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Product
-        fields = ['name', 'description', 'language', 'url', 'thumb', 'category', 'date']
+        fields = ['id', 'name', 'description', 'language', 'url', 'thumb', 'category', 'date']
 
 class ContactSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Contact
-        fields = ['univercity_name', 'phone_number', 'location']
+        fields = ['id', 'univercity_name', 'phone_number', 'location']
 
 
 class AboutSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = About
-        fields = ['our_history', 'our_mission', 'fup_regulation']
+        fields = ['id', 'our_history', 'our_mission', 'fup_regulation']
 
 
 class WorkerSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Worker
-        fields = ['full_name', 'work', 'image']
+        fields = ['id', 'full_name', 'work', 'image']
 
 
 class Social_mediaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Social_media
-        fields = ['facebook', 'instagram', 'telegram', 'you_tube']
+        fields = ['id', 'facebook', 'instagram', 'telegram', 'you_tube']
