@@ -28,7 +28,7 @@ urlpatterns = [
     path('aboutus/<int:pk>/', AboutRetrieveUpdateDestroyAPIView.as_view(), name='aboutus-detail'),
     path('workers/', WorkerListCreateAPIView.as_view(), name='worker-list-create'),
     path('workers/<int:pk>/', WorkerRetrieveUpdateDestroyAPIView.as_view(), name='worker-detail'),
-    path('social-media/', Social_mediaListCreateAPIView.as_view(), name='social_media_list_create'),
-    path('social-media/<int:pk>/', Social_mediaRetrieveUpdateDestroyAPIView.as_view(), name='social_media_detail'),
+    path('social_media/', Social_mediaListCreateAPIView.as_view(), name='social_media_list_create'),
+    path('social_media/<int:pk>/', Social_mediaRetrieveUpdateDestroyAPIView.as_view(), name='social_media_detail'),
 
 ]
