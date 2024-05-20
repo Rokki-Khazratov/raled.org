@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Category, Product, About, Worker, Contact, Social_media
+from .models import Category, Product, About, Worker, Contact, Social_media, Partner    
 
 
 class CategorySerializer(serializers.ModelSerializer):
@@ -45,3 +45,8 @@ class Social_mediaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Social_media
         fields = ['id', 'facebook', 'instagram', 'telegram', 'you_tube']
+
+class PartnerSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Partner
+        fields = ['id', 'image', 'url']

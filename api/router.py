@@ -13,7 +13,9 @@ from .views import (
     WorkerListCreateAPIView, 
     WorkerRetrieveUpdateDestroyAPIView, 
     Social_mediaListCreateAPIView, 
-    Social_mediaRetrieveUpdateDestroyAPIView
+    Social_mediaRetrieveUpdateDestroyAPIView, 
+    PartnerListCreateView, 
+    PartnerRetrieveUpdateDestroyView
 )
 
 
@@ -30,5 +32,6 @@ urlpatterns = [
     path('workers/<int:pk>/', WorkerRetrieveUpdateDestroyAPIView.as_view(), name='worker-detail'),
     path('social_media/', Social_mediaListCreateAPIView.as_view(), name='social_media_list_create'),
     path('social_media/<int:pk>/', Social_mediaRetrieveUpdateDestroyAPIView.as_view(), name='social_media_detail'),
-
+    path('partners/', PartnerListCreateView.as_view(), name='partner-list-create'),
+    path('partners/<int:pk>/', PartnerRetrieveUpdateDestroyView.as_view(), name='partner-detail'),
 ]

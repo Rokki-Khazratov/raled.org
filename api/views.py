@@ -1,13 +1,11 @@
 from rest_framework.generics import ListCreateAPIView,RetrieveUpdateDestroyAPIView
 
-from .serializers import CategorySerializer, ProductSerializer, AboutSerializer, ContactSerializer, WorkerSerializer, Social_mediaSerializer
-from .models import Category, Product, Contact, About, Worker, Social_media
+from .serializers import CategorySerializer, ProductSerializer, AboutSerializer, ContactSerializer, WorkerSerializer, Social_mediaSerializer, PartnerSerializer
+from .models import Category, Product, Contact, About, Worker, Social_media, Partner
 
 from rest_framework.pagination import PageNumberPagination
-from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from rest_framework.permissions import IsAuthenticated
 from .permission import IsAuth
 
 class ExampleView(APIView):
@@ -113,4 +111,14 @@ class Social_mediaListCreateAPIView(ListCreateAPIView):
 class Social_mediaRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
     queryset = Social_media.objects.all()
     serializer_class = Social_mediaSerializer
+    permission_classes = [IsAuth]
+
+class PartnerListCreateView(ListCreateAPIView):
+    queryset = Partner.objects.all()
+    serializer_class = PartnerSerializer
+    permission_classes = [IsAuth]
+
+class PartnerRetrieveUpdateDestroyView(RetrieveUpdateDestroyAPIView):
+    queryset = Partner.objects.all()
+    serializer_class = PartnerSerializer
     permission_classes = [IsAuth]

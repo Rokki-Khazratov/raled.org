@@ -60,3 +60,10 @@ class Social_media(models.Model):
     telegram = models.URLField()
     you_tube = models.URLField()
 
+class Partner(models.Model):
+    image = models.ImageField(upload_to='thumbs/partners')
+    url  = models.URLField()
+
+    def __str__(self):
+        return self.url
+
