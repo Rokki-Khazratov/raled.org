@@ -21,6 +21,7 @@ class Product(models.Model):
     thumb = models.ImageField(upload_to='thumbs/')
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     date = models.DateField(auto_now_add=True)
+    doi = models.CharField(max_length=200)
 
     def __str__(self):
         return self.name
@@ -51,3 +52,11 @@ class Worker(models.Model):
 
     def __str__(self):
         return self.full_name
+
+
+class Social_media(models.Model):
+    facebook = models.URLField()
+    instagram = models.URLField()
+    telegram = models.URLField()
+    you_tube = models.URLField()
+
