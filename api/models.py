@@ -67,3 +67,12 @@ class Partner(models.Model):
     def __str__(self):
         return self.url
 
+
+class Orgonise(models.Model):
+    full_name = models.CharField(max_length=255)
+    work = models.TextField()
+    description = models.TextField()
+    image = models.ImageField(upload_to='thumbs/partners')
+
+    def __str__(self) -> str:
+        return self.full_name

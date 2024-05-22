@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Category, Product, About, Worker, Contact, Social_media, Partner    
+from .models import Category, Product, About, Worker, Contact, Social_media, Partner,Orgonise    
 
 
 class CategorySerializer(serializers.ModelSerializer):
@@ -50,3 +50,8 @@ class PartnerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Partner
         fields = ['id', 'image', 'url']
+
+class OrgoniseSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Orgonise
+        fields = ['id', 'full_name', 'work', 'description']

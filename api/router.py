@@ -15,7 +15,9 @@ from .views import (
     Social_mediaListCreateAPIView, 
     Social_mediaRetrieveUpdateDestroyAPIView, 
     PartnerListCreateView, 
-    PartnerRetrieveUpdateDestroyView
+    PartnerRetrieveUpdateDestroyView, 
+    OrgoniseListCreateView, 
+    OrgoniseRetrieveUpdateDestroyView
 )
 
 
@@ -34,4 +36,6 @@ urlpatterns = [
     path('social_media/<int:pk>/', Social_mediaRetrieveUpdateDestroyAPIView.as_view(), name='social_media_detail'),
     path('partners/', PartnerListCreateView.as_view(), name='partner-list-create'),
     path('partners/<int:pk>/', PartnerRetrieveUpdateDestroyView.as_view(), name='partner-detail'),
+    path('orgonise/', views.OrgoniseListCreateView.as_view(), name='orgonise-list-create'),
+    path('orgonise/<int:pk>/', views.OrgoniseRetrieveUpdateDestroyView.as_view(), name='orgonise-detail'),
 ]

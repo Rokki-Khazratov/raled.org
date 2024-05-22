@@ -1,11 +1,14 @@
 from rest_framework.generics import ListCreateAPIView,RetrieveUpdateDestroyAPIView
 
-from .serializers import CategorySerializer, ProductSerializer, AboutSerializer, ContactSerializer, WorkerSerializer, Social_mediaSerializer, PartnerSerializer
-from .models import Category, Product, Contact, About, Worker, Social_media, Partner
+from .serializers import CategorySerializer, ProductSerializer, AboutSerializer, ContactSerializer, WorkerSerializer
+from .serializers import Social_mediaSerializer, PartnerSerializer, OrgoniseSerializer
+
+from .models import Category, Product, Contact, About, Worker, Social_media, Partner, Orgonise
 
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.views import APIView
 from rest_framework.response import Response
+
 from .permission import IsAuth
 
 class ExampleView(APIView):
@@ -121,4 +124,15 @@ class PartnerListCreateView(ListCreateAPIView):
 class PartnerRetrieveUpdateDestroyView(RetrieveUpdateDestroyAPIView):
     queryset = Partner.objects.all()
     serializer_class = PartnerSerializer
+    permission_classes = [IsAuth]
+
+
+class OrgoniseListCreateView(ListCreateAPIView):
+    queryset = Orgonise.objects.all()
+    serializer_class = OrgoniseSerializer
+    permission_classes = [IsAuth]
+
+class OrgoniseRetrieveUpdateDestroyView(RetrieveUpdateDestroyAPIView):
+    queryset = Orgonise.objects.all()
+    serializer_class = OrgoniseSerializer
     permission_classes = [IsAuth]
