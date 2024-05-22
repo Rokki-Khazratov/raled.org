@@ -156,11 +156,10 @@ header {
     }
 }
 
-.yozuv {
+.yozuv h2{
     margin-left: 500px;
     font-size: 28px;
-    color: red;
-
+    color: #A32C2C;
 }
 
 .rasm img {
