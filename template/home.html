@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Example</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+
+<body>
+    <header>
+        <div class="top-bar">
+            <img src="{% static 'logo.png' %}" alt="Logo" class="logo">
+            <div class="top-right">
+                <span class="language-switch">UZ | RU | EN</span>
+                <div class="social-icons">
+                    <a href="#"><i class='bx bxl-facebook-square' ></i></a>
+                    <a href="#"><i class='bx bxl-medium-old' ></i></a>
+                    <a href="#"><i class='bx bxl-linkedin-square' ></i></i></a>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <a href="#">Bosh sahifa</a>
+            <a href="#">Biz haqimizda</a>
+            <a href="#">Kitoblar</a>
+            <a href="#">Bog'lanish</a>
+            <a style="margin-left: -150px;" href="#" class="search-icon"><i class='bx bx-search'></i></a>
+        </nav>
+    </header>
+
+
+<!--!!!! MAIN  -->
+
+    <div class="card">
+        <div class="card-body">
+            <div class="book-cover">
+                <img src="{% static 'book-cover.jpg' %}" alt="Book Cover">
+            </div>
+            <div class="book-details">
+                <h2>International Teaching and Learning Settings in the Academic Professionalisation of Adult Education</h2>
+                <h3>An International and Comparative Study</h3>
+                <p class="date">Date: 2054-04-12</p>
+                <button class="view-more">View More</button>
+            </div>
+        </div>
+    </div>
+
+
+<!--!!!! MAIN END -->
+
+
+    <div class="yozuv">
+        <h1>Our Partners</h1>
+    </div>
+
+    <div class="rasm">
+        <img src="partner-m-tech.jpg">
+        <img src="partner-uz-tea.jpg">
+        <img src="partner-raled.jpg">
+        <img src="partner-etf.jpg">
+    </div>
+
+    <div class="pas">
+     <footer>
+         <p class="screj">Mahorat & Management</p>
+         <p class="proj">Location</p>
+         <p class="friday">Social</p>
+         <p class="projec">Safdosh Street,10</p>
+         <p class="project">Tashkent, Uzbekisatan</p>
+         <p class="mon">Opening Hours</p>
+         <p class="mond">minday-friday</p>
+         <p class="monda">10:00 AM - 08:00 PM</p>
+         <p class="monday">Tel: +998 95 195-00-55</p>
+
+         <button class="butn">Direction</button>
+    </footer>
+    </div>
+
+    <div class="icon">
+        <a href="#"><i class='bx bxl-facebook-square'></i></a>
+        <a href="#"><i class='bx bxl-instagram'></i></a>
+        <a href="#"><i class='bx bxl-telegram' ></i></a>
+        <a href="#"><i class='bx bxl-youtube'></i></i></a> 
+    </div>
+</body>
+</html>
