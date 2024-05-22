@@ -4,21 +4,23 @@
 
 {% block content %}
 <div class="card">
-    <div class="card-body">
+    {%for i in book%}
+    <div class="card-body" style="margin: 2%;">
         <div class="book-cover">
-            <img src="https://media.fupress.com/cover/n/14129">
-             <!-- static 'images/book-cover.jpg'  -->
+            {% if i.thumb %}
+            <img src="{{i.thumb.url}}">
+            {% else %}
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS01IODKDd-XpRnvBbSDlcg6scby3AOYc2ZfA&s">
+            {% endif %}
         </div>
-
-
-
         <div class="book-details">
-            <h2>International Teaching and Learning Settings in the Academic Professionalisation of Adult Education</h2>
-            <h3>An International and Comparative Study</h3>
-            <p class="date">Date: 2054-04-12</p>
+            <h2>{{i.name}}</h2>
+            <h3>{{ i.description|slice:":50" }}{% if i.description|length > 50 %}...{% endif %}</h3>      
+            <h4 class="date">{{i.date}}</h4>
             <button class="view-more">View More</button>
         </div>
-        
     </div>
-</div>
+    {%endfor%}
+</div> <br>
+
 {% endblock %}

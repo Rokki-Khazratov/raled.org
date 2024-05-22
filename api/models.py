@@ -21,7 +21,8 @@ class Product(models.Model):
     thumb = models.ImageField(upload_to='thumbs/')
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     date = models.DateField(auto_now_add=True)
-    doi = models.CharField(max_length=200)
+    doi = models.CharField(max_length=200,blank=True,null=True)
+    best = models.BooleanField(default=False)
 
     def __str__(self):
         return self.name
@@ -37,12 +38,12 @@ class Contact(models.Model):
 
 
 class About(models.Model):
-    our_history = models.CharField(max_length=1000)
-    our_mission = models.CharField(max_length=1000)
-    fup_regulation = models.CharField(max_length=1000)
+    address = models.CharField(max_length=1000)
+    email = models.CharField(max_length=1000)
+    phone_number = models.CharField(max_length=1000)
 
     def __str__(self):
-        return self.our_history
+        return self.address
 
 
 class Worker(models.Model):
@@ -55,8 +56,12 @@ class Worker(models.Model):
 
 
 class Social_media(models.Model):
-    facebook = models.URLField()
-    instagram = models.URLField()
-    telegram = models.URLField()
-    you_tube = models.URLField()
+    image = models.ImageField(upload_to='thumbs/medias')
+    url = models.URLField()
 
+class Partner(models.Model):
+    image = models.ImageField(upload_to='thumbs/partners')
+    url  = models.URLField()
+
+    def __str__(self):
+        return self.url

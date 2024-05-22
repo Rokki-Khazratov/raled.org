@@ -33,4 +33,6 @@ urlpatterns = [
 
     path('', index,name='index'),
     path('books/', books,name='books'),
+    path('about_us/', about_us,name='about_us'),
+    path('contact/', contact,name='contact'),
 ]
