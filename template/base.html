@@ -1,4 +1,6 @@
 {% load static %}
+{% load i18n %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,10 +28,10 @@
             </div>
         </div>
         <nav class="main-nav">
-            <a href="{% url 'index' %}">Bosh sahifa</a>
-            <a href="{% url 'about_us' %}">Biz haqimizda</a>
-            <a href="{% url 'books' %}">Kitoblar</a>
-            <a href="{% url 'contact' %}">Bog'lanish</a>
+            <a href="{% url 'index' %}">{% trans "Bosh sahifa"%}</a>
+            <a href="{% url 'about_us' %}">{% trans "Biz haqimizda"%} </a>
+            <a href="{% url 'books' %}">{% trans "Jurnal va maqolalar" %} </a>
+            <a href="{% url 'contact' %}">{% trans "Bog'lanish" %} </a>
             <a style="margin-left: -150px;" href="#" class="search-icon"><i class='bx bx-searchh'></i></a>
         </nav>
     </header>
@@ -38,16 +40,16 @@
 
     <div class="rokkis-footer row">
         <div class="left col-4">
-                <h3>Mahorat & Management</h3>
-                <p>Location</p>
-                <p>Social</p>
-                <p>Safdosh Street,10</p>
+                <h3>{% trans "Mahorat & Management"%}</h3>
+                <p>{% trans "Location"%}</p>
+                <p>{% trans "Social"%}</p>
+                <p>{% trans "Safdosh Street,10"%}</p>
         </div>
         <div class="right col-4">
-                <h3>Locations</h3>
-                <p>Location</p>
-                <p>Social</p>
-                <p>Safdosh Street,10</p>
+                <h3>{% trans "Locations" %}</h3>
+                <p>{% trans "Location" %}</p>
+                <p>{% trans "Social" %}</p>
+                <p>{% trans "Safdosh Street,10" %}</p>
         </div>
 
         <div class="icon col-4">

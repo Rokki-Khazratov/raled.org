@@ -4,3 +4,7 @@
 1. footer social medias +address
 2.navbar
 3.!!!!! DETAIL.HTML !!!
+
+
+
+requirement.txt -> qoshib qoyish kerak
