@@ -1,5 +1,7 @@
 from django.shortcuts import render
-
+from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
+from .models import Reconcile, Redikt
+from .serializers import ReconcileSerializer, RediktSerializer
 from api.models import About, Partner, Product
 
 def index(request):
