@@ -1,6 +1,0 @@
-23.05.24
-3:30 AM
-
-1. footer social medias +address
-2.navbar + hover-active
-3.!!!!! DETAIL.HTML !!!

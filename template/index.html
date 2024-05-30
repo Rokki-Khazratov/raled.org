@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}Home Page{% endblock %}
-
+{% load i18n %}
 {% block content %}
 <div class="card">
     {% for i in best_books %}
@@ -16,15 +16,16 @@
         <div class="book-details">
             <h2>{{ i.name }}</h2>
             <h3>{{ i.description|slice:":25" }}{% if i.description|length > 25 %}...{% endif %}</h3>
-            <h4 class="date">{{ i.date }}</h4>
-            <button class="view-more">View More</button>
+            <h4 class="date">{{ i.date }}</h4> <br>
+            <a href="{% url 'book_detail' i.id %}" class="view-more" style="text-decoration: none;">{% trans "View More"%}</a>
         </div>
     </div>
     {% endfor %}
 </div>
-
+ 
+<br>
 <div class="yozuv">
-    <h2>Our Partners</h2>
+    <h2>{% trans "Our Partners"%}</h2>
 </div>
 
 <div class="rasm">

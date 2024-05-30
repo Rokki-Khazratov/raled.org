@@ -13,7 +13,11 @@ from .api import (
     WorkerListCreateAPIView, 
     WorkerRetrieveUpdateDestroyAPIView, 
     Social_mediaListCreateAPIView, 
-    Social_mediaRetrieveUpdateDestroyAPIView
+    Social_mediaRetrieveUpdateDestroyAPIView, 
+    # ReconcileListCreateAPIView,
+    # ReconcileRetrieveUpdateDestroyAPIView,
+    # RediktListCreateAPIView,
+    # RediktRetrieveUpdateDestroyAPIView,
 )
 from .views import *
 
@@ -30,6 +34,12 @@ urlpatterns = [
     path('api/workers/<int:pk>/', WorkerRetrieveUpdateDestroyAPIView.as_view(), name='worker-detail'),
     path('api/social_media/', Social_mediaListCreateAPIView.as_view(), name='social_media_list_create'),
     path('api/social_media/<int:pk>/', Social_mediaRetrieveUpdateDestroyAPIView.as_view(), name='social_media_detail'),
+    # path('reconcile/', ReconcileListCreateAPIView.as_view(), name='reconcile-list-create'),
+    # path('reconcile/<int:pk>/', ReconcileRetrieveUpdateDestroyAPIView.as_view(), name='reconcile-retrieve-update-destroy'),
+    # path('redikt/', RediktListCreateAPIView.as_view(), name='redikt-list-create'),
+    # path('redikt/<int:pk>/', RediktRetrieveUpdateDestroyAPIView.as_view(), name='redikt-retrieve-update-destroy'),
+
+
 
     path('', index,name='index'),
     path('books/', books,name='books'),

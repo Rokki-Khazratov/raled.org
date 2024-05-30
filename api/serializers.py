@@ -45,3 +45,13 @@ class Social_mediaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Social_media
         fields = ['id','facebook', 'instagram', 'telegram', 'you_tube']
+
+# class ReconcileSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = Reconcile
+#         fields = ['file']
+
+# class RediktSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = Redikt
+#         fields = ['name', 'work_place', 'discription']

@@ -1,6 +1,8 @@
 from rest_framework.generics import ListCreateAPIView,RetrieveUpdateDestroyAPIView
 
-from .serializers import CategorySerializer, ProductSerializer, AboutSerializer, ContactSerializer, WorkerSerializer, Social_mediaSerializer
+from .serializers import CategorySerializer, ProductSerializer, AboutSerializer
+from .serializers import ContactSerializer, WorkerSerializer, Social_mediaSerializer
+
 from .models import Category, Product, Contact, About, Worker, Social_media
 
 
@@ -83,3 +85,20 @@ class Social_mediaListCreateAPIView(ListCreateAPIView):
 class Social_mediaRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
     queryset = Social_media.objects.all()
     serializer_class = Social_mediaSerializer
+
+
+# class ReconcileListCreateAPIView(ListCreateAPIView):
+#     queryset = Reconcile.objects.all()
+#     serializer_class = ReconcileSerializer
+
+# class ReconcileRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
+#     queryset = Reconcile.objects.all()
+#     serializer_class = ReconcileSerializer
+
+# class RediktListCreateAPIView(ListCreateAPIView):
+#     queryset = Redikt.objects.all()
+#     serializer_class = RediktSerializer
+
+# class RediktRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
+#     queryset = Redikt.objects.all()
+#     serializer_class = RediktSerializer

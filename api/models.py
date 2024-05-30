@@ -65,3 +65,16 @@ class Partner(models.Model):
 
     def __str__(self):
         return self.url
+
+
+#? RALED SAYTIDAN KORIB YANGI NARSALARDI QOSHISH KERAK
+
+
+
+class Redikt(models.Model):
+    name= models.CharField(max_length=255)
+    work_place = models.TextField()
+    discription = models.TextField()
+
+    def __str__(self):
+        return self.name

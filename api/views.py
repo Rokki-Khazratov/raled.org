@@ -1,5 +1,7 @@
 from django.shortcuts import render
-
+# from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
+# from .models import Reconcile, Redikt
+# from .serializers import ReconcileSerializer, RediktSerializer
 from api.models import About, Partner, Product
 
 def index(request):
@@ -40,3 +42,10 @@ def detail(request):
 def contact(request):
     contact = About.objects.all()
     return render(request, 'contact.html', {'contact':contact})
+
+
+# def redikt(request):
+#     return render(request, 'redikt.html')
+
+# def reconile(request):
+#     return render(request, 'reconile.html')

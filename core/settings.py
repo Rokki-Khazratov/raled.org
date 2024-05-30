@@ -31,6 +31,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',  
         'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -102,6 +103,18 @@ USE_TZ = True
 MEDIA_URL = '/storage/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'storage')
 
+
+
+LANGUAGES = [
+    ('en', 'English'),
+    ('ru', 'Russion'),
+    ('uz', 'Uzbek'),
+    # Boshqa tillarni qo'shishingiz mumkin
+]
+
+LOCALE_PATHS = [
+    BASE_DIR / 'locale',
+]
 
 
 STATIC_URL = '/static/'
