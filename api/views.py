@@ -11,15 +11,31 @@ def index(request):
     }
     return render(request, 'index.html', context)
 
+from django.core.paginator import Paginator
+
 def books(request):
-    book = Product.objects.all()
+    book_list = Product.objects.all()
+    paginator = Paginator(book_list, 2) 
+    
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
     context = {
-        'book' : book,
+        'book' : book_list,
+        'paginator' : paginator,
+        'page_number' : page_number,
+        'page_obj' : page_obj,
     }
     return render(request, 'books.html', context)
 
 def about_us(request):
     return render(request, 'about_us.html')
+
+def book_detail(request,book_id):
+    book = Product.objects.get(id=book_id)
+    return render(request, 'book_detail.html',{'book':book})
+
+def detail(request):
+    return render (request,'detail.html',{'detail':detail})
 
 def contact(request):
     contact = About.objects.all()

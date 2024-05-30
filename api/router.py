@@ -35,4 +35,5 @@ urlpatterns = [
     path('books/', books,name='books'),
     path('about_us/', about_us,name='about_us'),
     path('contact/', contact,name='contact'),
+    path('books/<int:book_id>', book_detail,name='book_detail'),
 ]

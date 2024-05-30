@@ -61,7 +61,7 @@ class Social_media(models.Model):
 
 class Partner(models.Model):
     image = models.ImageField(upload_to='thumbs/partners')
-    url  = models.URLField()
+    url   = models.URLField()
 
     def __str__(self):
         return self.url

@@ -37,6 +37,7 @@
         overflow: hidden;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        padding: 2%;
     }
 
     .contact-form {
@@ -135,27 +136,6 @@
         top: 1rem;
         transform: translateY(0);
     }
-
-    .btn {
-        padding: 0.6rem 1.3rem;
-        background-color: #fff;
-        border: 2px solid #fafafa;
-        font-size: 0.95rem;
-        color: #A32C2C;
-        line-height: 1;
-        border-radius: 5px;
-        outline: none;
-        cursor: pointer;
-        transition: 0.3s;
-        margin: 0;
-        width: 100%;
-    }
-
-    .btn:hover {
-        background-color: transparent;
-        color: #fff;
-    }
-
     .input-container span {
         position: absolute;
         top: 0;
@@ -180,93 +160,7 @@
         top: 50%;
         transform: translateY(-50%);
     }
-
-    .input-container span:before {
-        left: 50%;
-    }
-
-    .input-container span:after {
-        right: 50%;
-    }
-
-    .input-container.focus label {
-        top: 0;
-        transform: translateY(-50%);
-        left: 25px;
-        font-size: 0.8rem;
-    }
-
-    .input-container.focus span:before,
-    .input-container.focus span:after {
-        width: 50%;
-        opacity: 1;
-    }
-
-    .contact-info {
-        padding: 2.3rem 2.2rem;
-        position: relative;
-    }
-
-    .contact-info .title {
-        color: #A32C2C;
-    }
-
-    .text {
-        color: #333;
-        margin: 1.5rem 0 2rem 0;
-    }
-
-    .information {
-        display: flex;
-        color: #555;
-        margin: 0.7rem 0;
-        align-items: center;
-        font-size: 0.95rem;
-    }
-
-    .information i {
-        color: #A32C2C;
-    }
-
-    .icon {
-        width: 28px;
-        margin-right: 0.7rem;
-    }
-
-    .social-media {
-        padding: 2rem 0 0 0;
-    }
-
-    .social-media p {
-        color: #333;
-    }
-
-    .social-icons {
-        display: flex;
-        margin-top: 0.5rem;
-    }
-
-    .social-icons a {
-        width: 35px;
-        height: 35px;
-        border-radius: 5px;
-        background: #A32C2C;
-        color: #fff;
-        text-align: center;
-        line-height: 35px;
-        margin-right: 0.5rem;
-        transition: 0.3s;
-    }
-
-    .square {
-        position: absolute;
-        height: 400px;
-        top: 50%;
-        left: 50%;
-        transform: translate(181%, 11%);
-        opacity: 0.2;
-    }
-
+    
     @media (max-width: 850px) {
         .form {
             grid-template-columns: 1fr;
@@ -363,15 +257,15 @@
                 <div class="information">
                     <i class="fas fa-map-marker-alt"></i> &nbsp &nbsp
 
-                    <p>{{i.address}}</p>
+                    <p>Address: {{i.address}}</p>
                 </div>
                 <div class="information">
                     <i class="fas fa-envelope"></i> &nbsp &nbsp
-                    <p>{{i.email}}</p>
+                    <p>E-mail: {{i.email}}</p>
                 </div>
                 <div class="information">
                     <i class="fas fa-phone"></i>&nbsp&nbsp
-                    <p>{{i.phone_number}}</p>
+                    <p>Phone number: {{i.phone_number}}</p>
                 </div>
             </div>
             {%endfor%}
