@@ -33,7 +33,7 @@ urlpatterns = [
     path('api/workers/', WorkerListCreateAPIView.as_view(), name='worker-list-create'),
     path('api/workers/<int:pk>/', WorkerRetrieveUpdateDestroyAPIView.as_view(), name='worker-detail'),
     path('api/social_media/', Social_mediaListCreateAPIView.as_view(), name='social_media_list_create'),
-    path('api/social_media/<int:pk>/', Social_mediaRetrieveUpdateDestroyAPIView.as_view(), name='social_media_detail'),
+    path('api/social_media/<int:pk>/', Social_mediaRetrieveUpdateDestroyAPIView.as_view(), name='social_media_detail'), 
     # path('reconcile/', ReconcileListCreateAPIView.as_view(), name='reconcile-list-create'),
     # path('reconcile/<int:pk>/', ReconcileRetrieveUpdateDestroyAPIView.as_view(), name='reconcile-retrieve-update-destroy'),
     # path('redikt/', RediktListCreateAPIView.as_view(), name='redikt-list-create'),
@@ -42,8 +42,11 @@ urlpatterns = [
 
 
     path('', index,name='index'),
-    path('books/', books,name='books'),
     path('about_us/', about_us,name='about_us'),
     path('contact/', contact,name='contact'),
+    path('books/', books,name='books'),
     path('books/<int:book_id>', book_detail,name='book_detail'),
+    path('redikt/', redikt,name='redikt'),
+    # path('reconile/', reconile,name='reconile'),
+
 ]

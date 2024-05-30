@@ -2,7 +2,7 @@ from django.shortcuts import render
 # from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 # from .models import Reconcile, Redikt
 # from .serializers import ReconcileSerializer, RediktSerializer
-from api.models import About, Partner, Product
+from api.models import About, Partner, Product, Redikt
 
 def index(request):
     best_books = Product.objects.filter(best=True)
@@ -44,8 +44,9 @@ def contact(request):
     return render(request, 'contact.html', {'contact':contact})
 
 
-# def redikt(request):
-#     return render(request, 'redikt.html')
+def redikt(request):
+    redikts = Redikt.objects.all()
+    return render(request, 'redikt.html',{'redikts':redikts})
 
 # def reconile(request):
 #     return render(request, 'reconile.html')

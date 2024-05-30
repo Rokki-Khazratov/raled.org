@@ -73,8 +73,10 @@ class Partner(models.Model):
 
 class Redikt(models.Model):
     name= models.CharField(max_length=255)
-    work_place = models.TextField()
-    discription = models.TextField()
+    work_place_uz = models.TextField()
+    work_place_ru = models.TextField()
+    work_place_en = models.TextField()
+    discription = models.TextField(blank=True,null=True)
 
     def __str__(self):
         return self.name

@@ -109,7 +109,6 @@ LANGUAGES = [
     ('en', 'English'),
     ('ru', 'Russion'),
     ('uz', 'Uzbek'),
-    # Boshqa tillarni qo'shishingiz mumkin
 ]
 
 LOCALE_PATHS = [
