@@ -1,32 +1,3 @@
-{% extends 'base.html' %}
-
-{% block title %}Home Page{% endblock %}
-
-{% block content %}
-<div class="card">
-    {% for i in best_books %}
-    <div class="card-body" style="margin: 2%;">
-        <div class="book-cover">
-            {% if i.thumb %}
-            <img src="{{ i.thumb.url }}">
-            {% else %}
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS01IODKDd-XpRnvBbSDlcg6scby3AOYc2ZfA&s">
-            {% endif %}
-        </div>
-        <div class="book-details">
-            <h2>{{ i.name }}</h2>
-            <h3>{{ i.description|slice:":25" }}{% if i.description|length > 25 %}...{% endif %}</h3>
-            <h4 class="date">{{ i.date }}</h4>
-            <button class="view-more">View More</button>
-        </div>
-    </div>
-    {% endfor %}
-</div>
-
-<div class="yozuv">
-    <h2>Our Partners</h2>
-</div>
-
 <div class="rasm">
     {% for i in partner %}
     <a href="{{i.url}}"><img src="{{i.image.url}}"></a>

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Category, Product, About, Worker, Contact, Social_media,Reconcile, Redikt
+from .models import Category, Product, About, Worker, Contact, Social_media
 
 
 class CategorySerializer(serializers.ModelSerializer):
@@ -46,12 +46,12 @@ class Social_mediaSerializer(serializers.ModelSerializer):
         model = Social_media
         fields = ['id','facebook', 'instagram', 'telegram', 'you_tube']
 
-class ReconcileSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Reconcile
-        fields = '__all__'
+# class ReconcileSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = Reconcile
+#         fields = ['file']
 
-class RediktSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Redikt
-        fields = '__all__'
+# class RediktSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = Redikt
+#         fields = ['name', 'work_place', 'discription']

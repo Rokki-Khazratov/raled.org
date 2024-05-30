@@ -1,9 +1,9 @@
 from rest_framework.generics import ListCreateAPIView,RetrieveUpdateDestroyAPIView
 
 from .serializers import CategorySerializer, ProductSerializer, AboutSerializer
-from .serializers import ContactSerializer, WorkerSerializer, Social_mediaSerializer, ReconcileSerializer, RediktSerializer
+from .serializers import ContactSerializer, WorkerSerializer, Social_mediaSerializer
 
-from .models import Category, Product, Contact, About, Worker, Social_media, Reconcile, Redikt
+from .models import Category, Product, Contact, About, Worker, Social_media
 
 
 
@@ -87,18 +87,18 @@ class Social_mediaRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
     serializer_class = Social_mediaSerializer
 
 
-class ReconcileListCreateAPIView(ListCreateAPIView):
-    queryset = Reconcile.objects.all()
-    serializer_class = ReconcileSerializer
+# class ReconcileListCreateAPIView(ListCreateAPIView):
+#     queryset = Reconcile.objects.all()
+#     serializer_class = ReconcileSerializer
 
-class ReconcileRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
-    queryset = Reconcile.objects.all()
-    serializer_class = ReconcileSerializer
+# class ReconcileRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
+#     queryset = Reconcile.objects.all()
+#     serializer_class = ReconcileSerializer
 
-class RediktListCreateAPIView(ListCreateAPIView):
-    queryset = Redikt.objects.all()
-    serializer_class = RediktSerializer
+# class RediktListCreateAPIView(ListCreateAPIView):
+#     queryset = Redikt.objects.all()
+#     serializer_class = RediktSerializer
 
-class RediktRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
-    queryset = Redikt.objects.all()
-    serializer_class = RediktSerializer
+# class RediktRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
+#     queryset = Redikt.objects.all()
+#     serializer_class = RediktSerializer
