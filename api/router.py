@@ -47,6 +47,6 @@ urlpatterns = [
     path('books/', books,name='books'),
     path('books/<int:book_id>', book_detail,name='book_detail'),
     path('redikt/', redikt,name='redikt'),
-    # path('reconile/', reconile,name='reconile'),
+    path('send/', send,name='send'),
 
 ]

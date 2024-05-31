@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-31 01:17+0500\n"
+"POT-Creation-Date: 2024-05-31 12:40+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,30 +31,38 @@ msgid "Biz haqimizda"
 msgstr "About Us"
 
 #: template/base.html:33
+msgid "Material yuborish"
+msgstr "Send Materials"
+
+#: template/base.html:34
+msgid "Redaktsia"
+msgstr "Rediktion"
+
+#: template/base.html:35
 msgid "Jurnal va maqolalar"
 msgstr "Journals and articles"
 
-#: template/base.html:34
+#: template/base.html:36
 msgid "Bog'lanish"
 msgstr "Connection"
 
-#: template/base.html:43
+#: template/base.html:45
 msgid "Mahorat & Management"
 msgstr "Mahorat & Management"
 
-#: template/base.html:44 template/base.html:50
+#: template/base.html:46 template/base.html:52
 msgid "Location"
 msgstr "Location"
 
-#: template/base.html:45 template/base.html:51
+#: template/base.html:47 template/base.html:53
 msgid "Social"
 msgstr "Social"
 
-#: template/base.html:46 template/base.html:52
+#: template/base.html:48 template/base.html:54
 msgid "Safdosh Street,10"
 msgstr "Safdosh Street,10"
 
-#: template/base.html:49
+#: template/base.html:51
 msgid "Locations"
 msgstr "Locations"
 
@@ -62,6 +70,6 @@ msgstr "Locations"
 msgid "View More"
 msgstr "View More"
 
-#: template/index.html:27
+#: template/index.html:28
 msgid "Our Partners"
 msgstr "Our Partners"

@@ -2,6 +2,9 @@
 
 {% block title %}Jurnallar{% endblock %}
 
+{% load i18n %} 
+{% load description_change %} 
+
 {% block content %}
 
     <div class="row container">
@@ -15,7 +18,7 @@
                 <h2>{{book.name}}</h2>
             </div>
             <div class="description">
-                <p>{{book.description}}</p>
+                <p>{{ request|description_change:book }}</p>
             </div> <br>
             {% if book.doi %}
             <div class="izoh5">

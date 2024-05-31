@@ -17,7 +17,7 @@ from django.core.paginator import Paginator
 
 def books(request):
     book_list = Product.objects.all()
-    paginator = Paginator(book_list, 2) 
+    paginator = Paginator(book_list, 7) 
     
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
@@ -48,5 +48,5 @@ def redikt(request):
     redikts = Redikt.objects.all()
     return render(request, 'redikt.html',{'redikts':redikts})
 
-# def reconile(request):
-#     return render(request, 'reconile.html')
+def send(request):
+    return render(request, 'send.html')

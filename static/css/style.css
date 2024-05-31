@@ -3,6 +3,9 @@ body {
     margin: 0;
     background: white;
 }
+.row {
+    margin: 0 !important;
+}
 
 header {
     background-color: #A32C2C;
@@ -156,17 +159,20 @@ header {
     }
 }
 
-.yozuv h2{
-    margin-left: 500px;
+.yozuv{
+    text-align: center;
     font-size: 28px;
     color: #A32C2C;
 }
 
+.rasm {
+    width: 75%;
+    margin: 0 12%;
+}
 .rasm img {
-    margin-left: 150px;
-    margin-top: 80px;
+    margin: 2%;
     padding: 0px;
-    width: 180px;
+    width: 200px;
 }
 
 .screj {

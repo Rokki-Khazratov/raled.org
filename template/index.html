@@ -3,7 +3,7 @@
 {% block title %}Home Page{% endblock %}
 {% load i18n %}
 {% block content %}
-<div class="card">
+<div class="card" style="width: 50%; margin: 2% 25%;">
     {% for i in best_books %}
     <div class="card-body" style="margin: 2%;">
         <div class="book-cover">
@@ -30,7 +30,7 @@
 
 <div class="rasm">
     {% for i in partner %}
-    <a href="{{i.url}}"><img src="{{i.image.url}}"></a>
+    <a href="{{i.url}}"><img src="{{i.image.url}}" class="img-fluid"></a>
     {%endfor%}
 </div> <br>
 {% endblock %}

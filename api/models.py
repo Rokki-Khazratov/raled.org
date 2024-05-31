@@ -15,7 +15,9 @@ class Product(models.Model):
     ]
 
     name = models.CharField(max_length=250)
-    description = models.TextField()
+    description_uz = models.TextField()
+    description_ru = models.TextField()
+    description_en = models.TextField()
     language = models.CharField(max_length=2, choices=LANGUAGE_CHOICES, default='uz')
     url = models.URLField()
     thumb = models.ImageField(upload_to='thumbs/')
