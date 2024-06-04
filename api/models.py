@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Category(models.Model):
     name = models.CharField(max_length=100)
 
@@ -58,7 +59,7 @@ class Worker(models.Model):
 
 
 class Social_media(models.Model):
-    image = models.ImageField(upload_to='thumbs/medias')
+    icon = models.CharField()
     url = models.URLField()
 
 class Partner(models.Model):

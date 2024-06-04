@@ -2,6 +2,8 @@ from django.shortcuts import render
 # from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 # from .models import Reconcile, Redikt
 # from .serializers import ReconcileSerializer, RediktSerializer
+
+from django.core.paginator import Paginator
 from api.models import About, Partner, Product, Redikt
 
 def index(request):
@@ -12,8 +14,6 @@ def index(request):
         'partner': partner,
     }
     return render(request, 'index.html', context)
-
-from django.core.paginator import Paginator
 
 def books(request):
     book_list = Product.objects.all()
