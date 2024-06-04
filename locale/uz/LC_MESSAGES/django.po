@@ -3,12 +3,11 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-31 12:40+0500\n"
+"POT-Creation-Date: 2024-05-31 13:59+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,47 +21,95 @@ msgstr ""
 msgid "Biz haqimizda:"
 msgstr "Biz haqimizda"
 
-#: template/base.html:31
+#: template/about_us.html:13
+msgid "About us"
+msgstr ""
+"Research in Adult Learning and Education” (RALE) jurnali hayot davomida "
+"ta’lim bilan shug‘ullanuvchi, mehnat bozori talablarini hisobga olgan holda "
+"kattalar uchun ta’lim va kasbga o’qitish sifatini ta’minlash bilan "
+"shug‘ullanuvchi o‘zbekistonlik va jahon amaliyotchilari va tadqiqotchilari "
+"uchun mo‘ljallangan nashrdir.Biz hayot davomida ta’limni rag‘batlantirish va "
+"odamlarning doimiy o‘zgarib borayotgan jamiyatda rivojlanish imkoniyatlarini "
+"kengaytirish tarafdorimiz. Biz kattalar ta'limining ahamiyatini odamlarni "
+"nafaqat tadqiqot va malakaga asoslangan muhim ko'nikmalar bilan "
+"qurollantiradigan, balki shaxsiy o'sish, ijtimoiy inklyuziya va iqtisodiy "
+"rivojlanishga yordam beradigan o'zgartiruvchi kuch sifatida tan olamiz."
+"Jurnal kattalarning jamiyat va mehnatdagi ishtirokini rag'batlantirishga "
+"qaratilgan formal va noformal ta'lim va ta'limni yoritadi. Jurnalimizning "
+"har bir soni quyidagi va shunga o‘xshash sohalarda keng ko‘lamli mavzularni "
+"o‘z ichiga oladi:o kasb-hunar ta’limi pedagogikasi va psixologiyasi;o "
+"ijtimoiy sheriklikni rivojlantirish;o pedagogik va boshqaruv kadrlarining "
+"malakasini oshirish va qayta tayyorlash;o kattalar uchun ta'lim;o ish joyida "
+"o'qitish;o kasbiy rivojlanish.RALED butun dunyo bo'ylab kattalar ta'limi va "
+"ta'limining barcha jihatlarini o'rgatish va tadbiq etish yo'llarini "
+"boshqaradigan tamoyillar va amaliyotlarni konstruktiv muhokama qilish uchun "
+"muhit yaratishga intiladi. Shuningdek, u butun dunyo bo'ylab amaliyotchilar "
+"va tadqiqotchilar o'rtasida ma'lumot va g'oyalar almashinuvi uchun forumni "
+"taqdim etadi.Bizning taniqli tadqiqotchilar, o'qituvchilar va amaliyotchilar "
+"jamoasi kattalar ta'limining ko'p qirrali jihatlarini yoritishga "
+"ishtiyoqlidir. Izlanishlar, dalillarga asoslangan tadqiqotlar va tahlillar "
+"orqali biz kattalar ta'limi sohasidagi ilm va amaliyotni xabardor qilishga "
+"hissa qo'shishni maqsad qilganmiz, shuningdek, kattalar ta'limining global "
+"tabiatini va o’ziga xos masalalarini aks ettiruvchi turli istiqbollar va "
+"fanlararo tadqiqotlarni taqdim etishni maqsad qilganmiz.Tadqiqotchi sifatida "
+"siz kattalar ta'limini o'rganishga qaratilgan maqolalar, tadqiqot ishlari, "
+"amaliy tadqiqotlar, intervyular va sharhlarni kutishingiz mumkin. Biz sizni "
+"ushbu intellektual sayohatda bizga qo'shilishga taklif qilamiz, chunki biz "
+"ilg'or tadqiqotlar bilan shug'ullanamiz va kattalar o'quvchilarining "
+"hayotini boyitadigan va ushbu sohani rivojlantirishga hissa qo'shadigan "
+"amaliy natijalarni o'rganamiz.Biz butun dunyo bo'ylab tadqiqotchilar, "
+"o'qituvchilar, siyosatchilar va amaliyotchilarni jurnalimizga o'z "
+"tajribalari va g'oyalarini qo'shishga undaymiz. Tadqiqotlaringiz, "
+"innovatsion amaliyotlaringiz va tanqidiy mulohazalaringizni baham ko‘rish "
+"orqali siz jamoaviy bilimga hissa qo‘shishingiz va kattalar ta’limini "
+"yaxshilashga intilayotgan faol olimlar va amaliyotchilar hamjamiyatini "
+"rivojlantirishingiz mumkin.Bilim va o'zgarish uchun biz bilan birga "
+"bo'lganlarga rahmat. Keling, kattalar uchun ta'limning qiziqarli sohasini "
+"birgalikda o'rganaylik va yanada inklyuziv, adolatli va ma'rifatli jamiyat "
+"yaratishga harakat qilaylik.Buyurtmangizni yuboring XXXX yoki XXXX orqali "
+"biz bilan bog'laning"
+
+#: template/base.html:47
 msgid "Bosh sahifa"
 msgstr "Bosh sahifa"
 
-#: template/base.html:32
+#: template/base.html:48
 msgid "Biz haqimizda"
 msgstr "Biz haqimizda"
 
-#: template/base.html:33
+#: template/base.html:49
 msgid "Material yuborish"
 msgstr "Material yuborish"
 
-#: template/base.html:34
+#: template/base.html:50
 msgid "Redaktsia"
 msgstr "Redaktsia"
 
-#: template/base.html:35
+#: template/base.html:51
 msgid "Jurnal va maqolalar"
 msgstr "Jurnal va maqolalar"
 
-#: template/base.html:36
+#: template/base.html:52
 msgid "Bog'lanish"
 msgstr "Bog'lanish"
 
-#: template/base.html:45
+#: template/base.html:61
 msgid "Mahorat & Management"
 msgstr "Mahorat & Management"
 
-#: template/base.html:46 template/base.html:52
+#: template/base.html:62 template/base.html:68
 msgid "Location"
 msgstr "Manzilimiz"
 
-#: template/base.html:47 template/base.html:53
+#: template/base.html:63 template/base.html:69
 msgid "Social"
 msgstr "Ijtimoiy"
 
-#: template/base.html:48 template/base.html:54
+#: template/base.html:64 template/base.html:70
 msgid "Safdosh Street,10"
 msgstr "Safdosh Street,10"
 
-#: template/base.html:51
+#: template/base.html:67
 msgid "Locations"
 msgstr ""
 

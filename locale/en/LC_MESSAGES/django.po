@@ -3,12 +3,11 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-31 12:40+0500\n"
+"POT-Creation-Date: 2024-05-31 14:02+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,47 +21,67 @@ msgstr ""
 msgid "Biz haqimizda:"
 msgstr "About Us"
 
-#: template/base.html:31
+#: template/about_us.html:13
+msgid "About us"
+msgstr ""
+"Research in Adult Learning and Education (RALE) is a publication intended for Uzbek and international practitioners and researchers who are involved in lifelong learning, ensuring the quality of adult education and vocational training in line with labor market demands."
+"We advocate for lifelong learning to enhance opportunities for people to develop in an ever-changing society. We recognize the importance of adult education as a transformative force that equips people with essential skills based on research and competence, and that contributes to personal growth, social inclusion, and economic development."
+"The journal covers both formal and informal education aimed at promoting adult participation in society and the workforce. Each issue of our journal includes a wide range of topics in fields such as:"
+"Pedagogy and psychology of vocational education;"
+"Development of social partnerships;"
+"Professional development and retraining of pedagogical and managerial staff;"
+"Adult education;"
+"Workplace training;"
+"Professional development."
+"RALE aims to create an environment for constructive discussion of principles and practices that guide the teaching and implementation of all aspects of adult education and learning worldwide. It also provides a forum for the exchange of information and ideas among practitioners and researchers globally."
+"Our team of renowned researchers, educators, and practitioners is passionate about covering the multifaceted aspects of adult education. Through research, evidence-based studies, and analyses, we aim to inform the knowledge and practice in the field of adult education, presenting diverse perspectives and interdisciplinary research that reflect the global nature and unique issues of adult education."
+"As a researcher, you can expect articles, research papers, practical studies, interviews, and reviews focused on adult education. We invite you to join us on this intellectual journey as we engage in advanced research and explore practical outcomes that enrich the lives of adult learners and contribute to the development of this field."
+"We encourage researchers, educators, policymakers, and practitioners worldwide to contribute their experiences and ideas to our journal. By sharing your research, innovative practices, and critical reflections, you can contribute to collective knowledge and help build a community of active scholars and practitioners striving to improve adult education."
+"Thank you to those who join us in the pursuit of knowledge and change. Let's explore the fascinating field of adult education together and strive to create a more inclusive, just, and enlightened society."
+"Submit your order or contact us at XXXX or XXXX."
+
+
+#: template/base.html:47
 msgid "Bosh sahifa"
 msgstr "Main Page"
 
-#: template/base.html:32
+#: template/base.html:48
 msgid "Biz haqimizda"
 msgstr "About Us"
 
-#: template/base.html:33
+#: template/base.html:49
 msgid "Material yuborish"
 msgstr "Send Materials"
 
-#: template/base.html:34
+#: template/base.html:50
 msgid "Redaktsia"
 msgstr "Rediktion"
 
-#: template/base.html:35
+#: template/base.html:51
 msgid "Jurnal va maqolalar"
 msgstr "Journals and articles"
 
-#: template/base.html:36
+#: template/base.html:52
 msgid "Bog'lanish"
 msgstr "Connection"
 
-#: template/base.html:45
+#: template/base.html:61
 msgid "Mahorat & Management"
 msgstr "Mahorat & Management"
 
-#: template/base.html:46 template/base.html:52
+#: template/base.html:62 template/base.html:68
 msgid "Location"
 msgstr "Location"
 
-#: template/base.html:47 template/base.html:53
+#: template/base.html:63 template/base.html:69
 msgid "Social"
 msgstr "Social"
 
-#: template/base.html:48 template/base.html:54
+#: template/base.html:64 template/base.html:70
 msgid "Safdosh Street,10"
 msgstr "Safdosh Street,10"
 
-#: template/base.html:51
+#: template/base.html:67
 msgid "Locations"
 msgstr "Locations"
 
@@ -73,3 +92,44 @@ msgstr "View More"
 #: template/index.html:28
 msgid "Our Partners"
 msgstr "Our Partners"
+
+#~ msgid "about us"
+#~ msgstr ""
+#~ "Research in Adult Learning and Education (RALE) is a publication intended "
+#~ "for Uzbek and international practitioners and researchers who are "
+#~ "involved in lifelong learning, ensuring the quality of adult education "
+#~ "and vocational training in line with labor market demands.We advocate for "
+#~ "lifelong learning to enhance opportunities for people to develop in an "
+#~ "ever-changing society. We recognize the importance of adult education as "
+#~ "a transformative force that equips people with essential skills based on "
+#~ "research and competence, and that contributes to personal growth, social "
+#~ "inclusion, and economic development.The journal covers both formal and "
+#~ "informal education aimed at promoting adult participation in society and "
+#~ "the workforce. Each issue of our journal includes a wide range of topics "
+#~ "in fields such as:Pedagogy and psychology of vocational education;"
+#~ "Development of social partnerships;Professional development and "
+#~ "retraining of pedagogical and managerial staff;Adult education;Workplace "
+#~ "training;Professional development.RALE aims to create an environment for "
+#~ "constructive discussion of principles and practices that guide the "
+#~ "teaching and implementation of all aspects of adult education and "
+#~ "learning worldwide. It also provides a forum for the exchange of "
+#~ "information and ideas among practitioners and researchers globally.Our "
+#~ "team of renowned researchers, educators, and practitioners is passionate "
+#~ "about covering the multifaceted aspects of adult education. Through "
+#~ "research, evidence-based studies, and analyses, we aim to inform the "
+#~ "knowledge and practice in the field of adult education, presenting "
+#~ "diverse perspectives and interdisciplinary research that reflect the "
+#~ "global nature and unique issues of adult education.As a researcher, you "
+#~ "can expect articles, research papers, practical studies, interviews, and "
+#~ "reviews focused on adult education. We invite you to join us on this "
+#~ "intellectual journey as we engage in advanced research and explore "
+#~ "practical outcomes that enrich the lives of adult learners and contribute "
+#~ "to the development of this field.We encourage researchers, educators, "
+#~ "policymakers, and practitioners worldwide to contribute their experiences "
+#~ "and ideas to our journal. By sharing your research, innovative practices, "
+#~ "and critical reflections, you can contribute to collective knowledge and "
+#~ "help build a community of active scholars and practitioners striving to "
+#~ "improve adult education.Thank you to those who join us in the pursuit of "
+#~ "knowledge and change. Let's explore the fascinating field of adult "
+#~ "education together and strive to create a more inclusive, just, and "
+#~ "enlightened society.Submit your order or contact us at XXXX or XXXX."
