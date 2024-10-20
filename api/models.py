@@ -12,7 +12,6 @@ class Product(models.Model):
         ('uz', 'Uzbek'),
         ('ru', 'Russian'),
         ('en', 'English'),
-        #nechta til sorash!
     ]
 
     name = models.CharField(max_length=250)
@@ -59,7 +58,7 @@ class Worker(models.Model):
 
 
 class Social_media(models.Model):
-    icon = models.CharField()
+    icon = models.CharField(max_length=50)
     url = models.URLField()
 
 class Partner(models.Model):
@@ -68,12 +67,28 @@ class Partner(models.Model):
 
     def __str__(self):
         return self.url
+    
 
 
-#? RALED SAYTIDAN KORIB YANGI NARSALARDI QOSHISH KERAK
 
 
 
+
+class News(models.Model):
+    title_uz = models.CharField(max_length=255)
+    title_ru = models.CharField(max_length=255)
+    title_en = models.CharField(max_length=255)
+
+    discription_uz = models.TextField(blank=True,null=True)
+    discription_ru = models.TextField(blank=True,null=True)
+    discription_en = models.TextField(blank=True,null=True)
+
+    thumb = models.ImageField(upload_to='news/')
+
+    def __str__(self):
+        return self.title_uz
+    
+    
 class Redikt(models.Model):
     name= models.CharField(max_length=255)
     work_place_uz = models.TextField()

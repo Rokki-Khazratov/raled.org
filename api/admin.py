@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from api.models import Category, Partner, Product,  About, Contact, Redikt, Worker, Social_media
+from api.models import *
 
 admin.site.register(Category)
 admin.site.register(Product)
@@ -10,3 +10,4 @@ admin.site.register(Contact)
 admin.site.register(Social_media)
 admin.site.register(Partner)
 admin.site.register(Redikt)
+admin.site.register(News)
