@@ -1,5 +1,4 @@
 {% load static %}
-{% load i18n %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,76 +8,209 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Bosh Sahifa{% endblock %}</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/venobox/venobox.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+
+
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
 </head>
 
 <body>
-    <header>
-        <div class="top-bar">
-            <img src="{% static 'images/logo.png' %}" alt="Logo" class="logo">
-            <div class="top-right">
-                <form action="{% url 'set_language' %}" method="post" style="display:inline;">
-                    {% csrf_token %}
-                    <input name="next" type="hidden" value="{{ request.path }}">
-                    <input name="language" type="hidden" value="uz">
-                    <button type="submit" style="background:none; border:none; padding:0; cursor:pointer;">UZ</button>
-                </form> |
-                <form action="{% url 'set_language' %}" method="post" style="display:inline;">
-                    {% csrf_token %}
-                    <input name="next" type="hidden" value="{{ request.path }}">
-                    <input name="language" type="hidden" value="ru">
-                    <button type="submit" style="background:none; border:none; padding:0; cursor:pointer;">RU</button>
-                </form> |
-                <form action="{% url 'set_language' %}" method="post" style="display:inline;">
-                    {% csrf_token %}
-                    <input name="next" type="hidden" value="{{ request.path }}">
-                    <input name="language" type="hidden" value="en">
-                    <button type="submit" style="background:none; border:none; padding:0; cursor:pointer;">ENG</button>
-                </form>
+    <div id="topbar" class="d-none d-lg-flex align-items-center">
+        <div class="container d-flex">
+            <div class="contact-info mr-auto">
+                <i class="icofont-envelope"></i> <a href="mailto:info@zominakm.uz">info@zominakm.uz</a>
+                <i class="icofont-phone"></i> +998 72 226-37-28
             </div>
-            <div class="social-icons">
-                    <a href="https://www.facebook.com/watch/mahoratLC/"><i class='bx bxl-facebook-square'></i></a>
-                    <a href="https://www.instagram.com/mahoratmanagement/"><i class='bx bxl-instagram'></i></a>
-                    <a href="https://t.me/mahorat_management"><i class='bx bxl-telegram'></i></a>
+            <div class="social-links">
+
+                <a href="https://www.facebook.com/groups/252237032486173/" class="facebook"><i
+                        class="icofont-facebook"></i></a>
+
+                <a href="https://www.instagram.com/invites/contact/?i=1chleaw7nt7ay&amp;utm_content=mah7s4c"
+                    class="instagram"><i class="icofont-instagram"></i></a>
+
+                <a href="https://m.youtube.com/channel/UCkXSpJpAHFjhyAQRrh_DvCA?noapp=1" class="youtube"><i
+                        class="icofont-youtube"></i></a>
+
+
+                <a href="https://t.me/zomin_kutubxona_markazii" class="instagram"><i class="icofont-telegram"></i></a>
+
             </div>
         </div>
-        <nav class="main-nav">
-            <a href="{% url 'index' %}">{% trans "Bosh sahifa"%}</a>
-            <a href="{% url 'about_us' %}">{% trans "Biz haqimizda"%} </a>
-            <a href="{% url 'send' %}">{% trans "Material yuborish"%} </a>
-            <a href="{% url 'redikt' %}">{% trans "Redaktsia"%} </a>
-            <a href="{% url 'books' %}">{% trans "Jurnal va maqolalar" %} </a>
-            <a href="{% url 'contact' %}">{% trans "Bog'lanish" %} </a>
-            <a style="margin-left: -150px;" href="#" class="search-icon"><i class='bx bx-searchh'></i></a>
-        </nav>
+    </div>
+    <!-- ======= Header ======= -->
+    <header id="header">
+        <div class="container d-flex align-items-center">
+
+            <h1 class="logo mr-auto"><a href="{% url 'index' %}">ZOMIN AKM</a></h1>
+
+            <nav class="nav-menu d-none d-lg-block">
+                <ul>
+                    <li><a href="{% url 'index' %}">Bosh sahifa</a></li>
+
+                    <li class="drop-down"><a href="#">AKM haqida</a>
+                        <ul>
+                            <li><a href="{% url 'history' %}">AKM tarixi</a></li>
+                            <li><a href="{% url 'member' %}">Rahbariyat</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- <li class="drop-down"><a href="#">Bo&#039;limlar</a>
+                        <ul>
+                            <li><a href="page/abonement-va-foydalanuvchilarga-xizmat-ko-rsatish-xizmati.html">Abonement
+                                    va foydalanuvchilarga xizmat ko‘rsatish xizmati</a></li>
+                            <li><a href="page/axborot-bibliografiya-xizmati.html">Axborot-bibliografiya xizmati</a></li>
+                            <li><a href="page/fondlarni-to-ldirish-saqlash-ishlov-berish-xizmati.html">Fondlarni
+                                    to‘ldirish, saqlash ishlov berish xizmati</a></li>
+                            <li><a href="page/axborot-kommunikatsiya-texnalogiyalari-va-raqamlashtirish-xizmati.html">Axborot
+                                    kommunikatsiya texnalogiyalari va raqamlashtirish xizmati</a></li>
+                        </ul>
+                    </li> -->
+
+                    <li><a href="{% url 'all_books' %}">Elektron kutubxona</a></li>
+
+                    <li><a href="{% url 'index' %}#kitobbuyurtma">Kitob buyurtma berish</a></li>
+
+                    <li><a href="#telegramlink">Biz bilan bog&#039;lanish</a></li>
+
+
+
+                </ul>
+            </nav>
+        </div>
     </header>
+    <main>
 
-    {% block content %}{% endblock %}
 
-    <footer class="rokkis-footer row">
-        <div class="left col-4">
-            <h3>{% trans "Mahorat & Management"%}</h3>
-            <p>{% trans "Location"%}</p>
-            <p>{% trans "Social"%}</p>
-            <p>{% trans "Safdosh Street,10"%}</p>
-        </div>
-        <div class="right col-4">
-            <h3>{% trans "Locations" %}</h3>
-            <p>{% trans "Location" %}</p>
-            <p>{% trans "Social" %}</p>
-            <p>{% trans "Safdosh Street,10" %}</p>
+
+        {% block content %}
+
+
+        {% endblock %}
+
+
+
+    </main>
+    <footer id="footer">
+
+        <div class="footer-newsletter">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <h4>Bizning telegram kanalimizga a'zo bo'ling</h4>
+                        <a href="https://t.me/zomin_kutubxona_markazii" class="btn btn-primary">A'zo bo'lish</a>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="icon col-4" style="font-size: 2pc;">
-            <h3>Social Medias</h3>
-            <a href="https://www.facebook.com/watch/mahoratLC/"><i class='bx bxl-facebook-square'></i></a>
-            <a href="https://www.instagram.com/mahoratmanagement/"><i class='bx bxl-instagram'></i></a>
-            <a href="https://t.me/mahorat_management"><i class='bx bxl-telegram'></i></a>
-            <a href="https://www.youtube.com/channel/UC5a9BbxxGgeOJaZ2wdA9-xg"><i class='bx bxl-youtube'></i></i></a>
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h3> Zomin kutubxona markazi<span>.</span></h3>
+                        <p>
+                            Zomin tumani<br> Zomin shaharchasi<br><br>
+                            <strong>Telefon:</strong> +998 72 000-00-00<br>
+                            <strong>Email:</strong> info@zominakm.uz<br>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Zomin AKM</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a
+                                    href="page/axborot-resurs-markazi-rahbariyati.html">Rahbariyat</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a
+                                    href="page/axborot-resurs-markazi-tarixi.html">AKM tarixi</a></li>
+
+                            <li><i class="bx bx-chevron-right"></i> <a href="page/bo-sh-ish-o-rinlari.html">Boʼsh ish
+                                    oʼrinlari</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Bo'limlar</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a
+                                    href="page/abonement-va-foydalanuvchilarga-xizmat-ko-rsatish-xizmati.html">Abonement
+                                    va foydalanuvchilarga xizmat ko‘rsatish xizmati
+                                </a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a
+                                    href="page/axborot-bibliografiya-xizmati.html">Axborot-bibliografiya xizmati
+                                </a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a
+                                    href="page/fondlarni-to-ldirish-saqlash-ishlov-berish-xizmati.html">Fondlarni
+                                    to‘ldirish, saqlash ishlov berish xizmati
+                                </a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a
+                                    href="page/abonement-va-foydalanuvchilarga-xizmat-ko-rsatish-xizmati.html">Abonement
+                                    va foydalanuvchilarga xizmat ko‘rsatish xizmati
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div> -->
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Biz ijtimoiy tarmoqlarda</h4>
+                        <p>Biz ijtimoiy tarmoqlarimiz orqali kuzatib boring</p>
+                        <div class="social-links mt-3">
+                            <a href="https://www.facebook.com/groups/252237032486173/" class="facebook"><i
+                                    class="bx bxl-facebook"></i></a>
+
+                            <a href="https://www.instagram.com/invites/contact/?i=1chleaw7nt7ay&amp;utm_content=mah7s4c"
+                                class="instagram"><i class="bx bxl-instagram"></i></a>
+                            <a href="https://m.youtube.com/channel/UCkXSpJpAHFjhyAQRrh_DvCA?noapp=1" class="youtube"><i
+                                    class="icofont-youtube"></i></a>
+
+
+                            <a href="https://t.me/zomin_kutubxona_markazii" class="instagram"><i
+                                    class="icofont-telegram"></i></a>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
-    </footer>
+
+        <div class="container py-4">
+            <div class="copyright">
+                &copy; Copyright <strong><span>zominakm.uz Library</span></strong>. All Rights Reserved
+            </div>
+
+        </div>
+    </footer><!-- End Footer -->
+
+    <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+    <script src="{% static 'vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'vendor/counterup/counterup.min.js' %}"></script>
+    <script src="{% static 'vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'vendor/venobox/venobox.min.js' %}"></script>
+    <script src="{% static 'vendor/aos/aos.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
 </body>
 
 </html>

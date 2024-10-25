@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static%}
+{% block title %}All Books{% endblock %}
+
+{% block content %}
+<section class="container">
+
+    <div class="row">
+
+        {% for i in books %}
+        <div class="col-md-3 mb-5">
+            <div class="card">
+
+                <img class="card-img-top" src="{{ i.thumb.url }}" alt="Card image cap">
+                <div class="card-body">
+                    <h6 class="card-title">{{i.name}}</h6>
+                    <p class="card-text">
+                        {{ i.description|slice:"0:32" }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+
+    </div>
+
+</section>
+{% endblock %}

@@ -1,5 +1,5 @@
 from django.template import Library
-from api.models import Product, Redikt
+from api.models import Product
 
 register = Library()
 

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static%}
+{% block title %}Members{% endblock %}
+
+{% block content %}
+<section class="container">
+<div class="row">
+
+    {% for i in member %}
+    <div class="col-md-4 mb-6">
+        {% if i.img %}
+        etst if 
+        <img class="card-img-top" src="{{ i.img.url }}" alt="Card image cap">
+        {% endif %}
+        <!-- <img class="card-img-top" src="https://cdn.britannica.com/34/94934-050-BBF93D08/John-F-Kennedy.jpg?w=300" alt="Card image cap"> -->
+        <div class="card-body">
+            <h3 class="card-title">{{i.name}}</h3>
+            <h6 class="card-title">{{i.work_place}}</h6>
+            <p class="card-text">
+                {{ i.discription|slice:"0:32" }}...
+            </p>
+        </div>
+    </div>
+    {% endfor %}
+    
+</div>
+</section>
+{% endblock %}

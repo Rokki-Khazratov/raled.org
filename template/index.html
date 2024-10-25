@@ -1,32 +1,181 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}Home Page{% endblock %}
-{% load i18n %}
+
 {% block content %}
-<div class="card" style="width: 50%; margin: 2% 25%;">
-    
-    {% for i in best_books %}
-    <div class="card-body" style="margin: 2%;">
-        <div class="book-cover">
-            {% if i.thumb %}
-            <img src="{{ i.thumb.url }}">
-            {% else %}
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS01IODKDd-XpRnvBbSDlcg6scby3AOYc2ZfA&s">
-            {% endif %}
+<style>
+    .rokkis-bg {
+        background-image: url("{% static 'img/zarbdor-bg.jpg' %}");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+</style>
+
+
+<section id="hero" class="d-flex align-items-center rokkis-bg">
+    <div class="container" data-aos="zoom-out" data-aos-delay="100">
+        <h1>Zomin tuman</h1>
+        <h2>Axborot kutubxona markazi rasmiy sahifasi</h2>
+
+    </div>
+</section>
+
+<section style="padding: 50px 0;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="text-center mb-4">Yangiliklar</h3>
+            </div>
         </div>
-        <div class="book-details">
-            <h2>{{ i.name }}</h2>
-            <h3>{{ i.description|slice:":25" }}{% if i.description|length > 25 %}...{% endif %}</h3>
-            <h4 class="date">{{ i.date }}</h4> <br>
-            <a href="{% url 'book_detail' i.id %}" class="view-more" style="text-decoration: none;">{% trans "View More"%}</a>
+        <div class="row">
+
+            {% for i in news %}
+            <div class="col-md-3 mb-5">
+                <a href="{% url 'news_detail' i.id %}" class="card">
+
+                    <img class="card-img-top" src="{{ i.thumb.url }}" alt="Card image cap">
+                    <div class="card-body">
+                        <h6 class="card-title">{{i.title}}</h6>
+                        <p class="card-text">
+                            {{ i.discription|slice:"0:32" }}...
+                        </p>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+
+
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <a href="{% url 'all_news' %}">
+                    <h3 class="text-center mb-4">Barcha yangiliklar</h3>
+                </a>
+            </div>
         </div>
     </div>
-    {% endfor %}
-</div>
- 
-<br>
-<div class="yozuv">
-    <h2>{% trans "Our Partners"%}</h2>
-</div>
-{% endblock %}
 
+</section>
+
+<div style="padding: 50px 0;background: #f1f6fe;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <h4>Bizning <b>@zominakm_bot</b> telegram botimiz orqali kitobxonga aylaning</h4>
+                <a href="https://t.me/zominakm_bot" class="btn btn-primary">A'zo bo'lish</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ======= Featured Services Section ======= -->
+<section id="featured-services" class="featured-services">
+    <div class="container" data-aos="fade-up">
+
+        <div class="row">
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                <div class="icon-box w-100" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon"><i class="bx bx-user"></i></div>
+                    <h4 class="title"><a href="#">360 ta</a></h4>
+                    <p class="description">Kitobxonlar soni</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                <div class="icon-box w-100" data-aos="fade-up" data-aos-delay="200">
+                    <div class="icon"><i class="bx bx-book-heart"></i></div>
+                    <h4 class="title"><a href="#">0 ta</a></h4>
+                    <p class="description">Yoqimlilar sarasidagi resurslar</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                <div class="icon-box w-100" data-aos="fade-up" data-aos-delay="300">
+                    <div class="icon"><i class="bx bx-book-content"></i></div>
+                    <h4 class="title"><a href="#">0 ta</a></h4>
+                    <p class="description">Elektron resurslar soni</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                <div class="icon-box w-100" data-aos="fade-up" data-aos-delay="400">
+                    <div class="icon"><i class="bx bx-book"></i></div>
+                    <h4 class="title"><a href="#">20500 ta</a></h4>
+                    <p class="description">AXborot-resurs markazi fondi</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section><!-- End Featured Services Section -->
+
+
+
+
+
+<section style="padding: 50px 0;background: #f1f6fe;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="text-center mb-4">Yangi qo'shilgan adabiyotlar</h3>
+            </div>
+        </div>
+        <div class="row">
+        </div>
+    </div>
+
+</section>
+
+<section id="kitobbuyurtma" class="contact">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h3><span>Kitob buyurtma bering</span></h3>
+            <p>Siz bizning kutubxonamizdan qidirgan kitobingizni topaolamdingizmi marhamat buyurtma bering va
+                biz siz uchun xaridni amalga oshiramiz</p>
+        </div>
+
+
+
+        <div class="row  justify-content-center" data-aos="fade-up" data-aos-delay="100">
+
+
+
+            <div class="col-lg-6">
+                <form action="{% url 'index' %}" method="post" role="form" class="php-email-form">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col form-group">
+                            <input type="text" name="name" class="form-control" id="name" placeholder="F.I.O" required>
+                        </div>
+                        <div class="col form-group">
+                            <input type="text" class="form-control" name="tell" id="tell"
+                                placeholder="Telefon raqamingiz" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="kitobnomi" id="kitobnomi" placeholder="Kitob nomi"
+                            required>
+                    </div>
+
+                    <div class="my-3">
+                        <div class="loading">Yuklanmoqda...</div>
+                        <div class="error-message"></div>
+                        <div class="sent-message" style="background-color: #4BB543;">Buyurtmangiz muvaffaqiyatli qabul qilindi!</div>
+                    </div>
+
+                    <div class="text-center"><button type="submit">Buyurtma qilish</button></div>
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+{% endblock %}

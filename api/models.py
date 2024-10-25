@@ -8,23 +8,12 @@ class Category(models.Model):
         return self.name
 
 class Product(models.Model):
-    LANGUAGE_CHOICES = [
-        ('uz', 'Uzbek'),
-        ('ru', 'Russian'),
-        ('en', 'English'),
-    ]
-
     name = models.CharField(max_length=250)
-    description_uz = models.TextField()
-    description_ru = models.TextField()
-    description_en = models.TextField()
-    language = models.CharField(max_length=2, choices=LANGUAGE_CHOICES, default='uz')
+    description = models.TextField()
     url = models.URLField()
     thumb = models.ImageField(upload_to='thumbs/')
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     date = models.DateField(auto_now_add=True)
-    doi = models.CharField(max_length=200,blank=True,null=True)
-    best = models.BooleanField(default=False)
 
     def __str__(self):
         return self.name
@@ -46,55 +35,47 @@ class About(models.Model):
 
     def __str__(self):
         return self.address
-
-
-class Worker(models.Model):
-    full_name = models.CharField(max_length=50)
-    work = models.CharField(max_length=55)
-    image = models.ImageField(upload_to='workers/image')
+    
+class History(models.Model):
+    name = models.TextField()
 
     def __str__(self):
-        return self.full_name
+        return "History"
+
 
 
 class Social_media(models.Model):
     icon = models.CharField(max_length=50)
     url = models.URLField()
 
-class Partner(models.Model):
-    image = models.ImageField(upload_to='thumbs/partners')
-    url   = models.URLField()
-
-    def __str__(self):
-        return self.url
-    
-
-
-
-
 
 
 class News(models.Model):
-    title_uz = models.CharField(max_length=255)
-    title_ru = models.CharField(max_length=255)
-    title_en = models.CharField(max_length=255)
-
-    discription_uz = models.TextField(blank=True,null=True)
-    discription_ru = models.TextField(blank=True,null=True)
-    discription_en = models.TextField(blank=True,null=True)
-
+    title = models.CharField(max_length=255)
+    discription = models.TextField(blank=True,null=True)
     thumb = models.ImageField(upload_to='news/')
+    created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.title_uz
+        return self.title
     
     
-class Redikt(models.Model):
+class Member(models.Model):
     name= models.CharField(max_length=255)
-    work_place_uz = models.TextField()
-    work_place_ru = models.TextField()
-    work_place_en = models.TextField()
+    work_place = models.TextField()
     discription = models.TextField(blank=True,null=True)
+    img = models.ImageField(upload_to='members/',blank=True,null=True)
+
 
     def __str__(self):
         return self.name
+    
+
+class BookOrder(models.Model):
+    name = models.CharField(max_length=255)
+    phone = models.CharField(max_length=20)
+    book_name = models.CharField(max_length=255)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Order: {self.book_name} by {self.name} at {self.created_at}"
